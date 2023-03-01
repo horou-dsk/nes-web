@@ -1,0 +1,20 @@
+.main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fps {
+    position: absolute;
+    color: white;
+    left: 20px;
+    top: 20px;
+}
+
+.phoneScreen {
+    transform: rotate(90deg);
+    width: 100vw;
+    position: relative;
+}

@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+@import "styles/nes.min.css";
+
+@font-face {
+  font-family: ZpixReview;
+  src: url(https://zpix.now.sh/zpix.woff2?zpix--online);
+}
+
+body {
+  margin: 0;
+  font-family: "Press Start 2P", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: black;
+  overscroll-behavior-y: contain;
+  user-select: none;
+}
+
+html, body {
+  height: 100%;
+  color: white;
+}
+
+#root {
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

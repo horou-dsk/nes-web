@@ -1,0 +1,18 @@
+[package]
+name = "nes-wasm"
+version = "0.1.0"
+authors = ["Morgana <xly_tk@foxmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+nes_rust = {git = "https://github.com/takahirox/nes-rust.git"}
+wasm-bindgen = "0.2"
+
+[lib]
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = false
