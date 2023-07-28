@@ -1,10 +1,10 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 
-const HOST_URL = {
-  development: 'http://192.168.5.198:9233/', // 'http://192.168.5.199:8056/',
-  test: 'http://192.168.5.201:8056/',
-  production: process.env.REACT_APP_HOST_URL || 'http://192.168.5.198:22339/',
-}
+// const HOST_URL = {
+//   development: 'http://192.168.5.198:9233/', // 'http://192.168.5.199:8056/',
+//   test: 'http://192.168.5.201:8056/',
+//   production: process.env.REACT_APP_HOST_URL || 'http://192.168.5.198:22339/',
+// }
 
 export function runLoading(config: AxiosRequestConfig = {}) {
   return {
@@ -17,7 +17,7 @@ export function runLoading(config: AxiosRequestConfig = {}) {
 }
 
 const instance = axios.create({
-  baseURL: HOST_URL[process.env.NODE_ENV as keyof typeof HOST_URL],
+  baseURL: import.meta.env.VITE_HTTP_BASEURL,
   headers: {
     'Content-Type': 'application/json;charset=UTF-8',
   },

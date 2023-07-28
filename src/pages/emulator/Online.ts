@@ -26,7 +26,7 @@ export default class Online {
     if (room) {
       console.log(`room = ${room}`)
       this.frameTimer = new FrameTimer(this.onlineFrame)
-      this.socket = new WebSocket(process.env.REACT_APP_WSS_URL + '/ws?room=' + room)
+      this.socket = new WebSocket(import.meta.env.VITE_WSS_URL + '/ws?room=' + room)
       this.socket.addEventListener('open', this.onOpen);
       this.socket.addEventListener('message', this.onMessage);
       this.socket.addEventListener('close', this.onClose);
